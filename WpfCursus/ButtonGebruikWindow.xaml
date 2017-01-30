@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCursus"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="ButtonGebruik" Height="350" Width="525">
+    <StackPanel>
+        <Label BorderBrush="Black" BorderThickness="2" Name="LabelTekst" Height="50">Dit is de tekstblok die we gaan manipuleren</Label>
+        <StackPanel Orientation="Horizontal">
+            <ToggleButton Margin="10" Name="ButtonBold" Checked="ButtonBold_Checked" Unchecked="ButtonBold_Unchecked">Bold</ToggleButton>
+            <ToggleButton Margin="10" Name="ButtonItalic" Click="ButtonItalic_Click">Italic</ToggleButton>
+            <TextBlock Margin="10">Font vergroten en verkleinen</TextBlock>
+            <RepeatButton Margin="10" Name="increasefont" Click="increasefont_Click" Delay="1000">+</RepeatButton>
+            <RepeatButton Margin="10" Name="decreasefont" Click="decreasefont_Click" Delay="1000">-</RepeatButton>
+        </StackPanel>
+
+    </StackPanel>
 </Window>

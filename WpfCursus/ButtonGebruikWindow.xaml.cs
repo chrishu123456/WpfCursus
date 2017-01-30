@@ -24,5 +24,35 @@ namespace WpfCursus
         {
             InitializeComponent();
         }
+
+        private void ButtonBold_Checked(object sender, RoutedEventArgs e)
+        {
+            LabelTekst.FontWeight = FontWeights.Bold;
+        }
+
+        private void ButtonBold_Unchecked(object sender, RoutedEventArgs e)
+        {
+            LabelTekst.FontWeight = FontWeights.Normal;
+        }
+
+        private void ButtonItalic_Click(object sender, RoutedEventArgs e)
+        {
+            if (ButtonItalic.IsChecked == true)
+                LabelTekst.FontStyle = FontStyles.Italic;
+            else
+                LabelTekst.FontStyle = FontStyles.Normal;
+        }
+
+        private void increasefont_Click(object sender, RoutedEventArgs e)
+        {
+            if ( LabelTekst.FontSize < 25)
+            LabelTekst.FontSize = LabelTekst.FontSize + 1;
+        }
+
+        private void decreasefont_Click(object sender, RoutedEventArgs e)
+        {
+            if (LabelTekst.FontSize > 1)
+            LabelTekst.FontSize = LabelTekst.FontSize - 1;
+        }
     }
 }
