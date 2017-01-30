@@ -28,19 +28,28 @@ namespace WpfCursus
         private void ButtonBold_Checked(object sender, RoutedEventArgs e)
         {
             LabelTekst.FontWeight = FontWeights.Bold;
+            boldcheckbox.IsChecked = ButtonBold.IsChecked;
         }
 
         private void ButtonBold_Unchecked(object sender, RoutedEventArgs e)
         {
             LabelTekst.FontWeight = FontWeights.Normal;
+            boldcheckbox.IsChecked = ButtonBold.IsChecked;
         }
 
         private void ButtonItalic_Click(object sender, RoutedEventArgs e)
         {
             if (ButtonItalic.IsChecked == true)
+            {
                 LabelTekst.FontStyle = FontStyles.Italic;
+                italiccheckbox.IsChecked = ButtonItalic.IsChecked;
+            }
             else
-                LabelTekst.FontStyle = FontStyles.Normal;
+            { LabelTekst.FontStyle = FontStyles.Normal;
+                italiccheckbox.IsChecked = ButtonItalic.IsChecked; 
+            }
+                
+
         }
 
         private void increasefont_Click(object sender, RoutedEventArgs e)
@@ -53,6 +62,41 @@ namespace WpfCursus
         {
             if (LabelTekst.FontSize > 1)
             LabelTekst.FontSize = LabelTekst.FontSize - 1;
+        }
+
+        private void Blue_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Blue_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Color_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton knop = (RadioButton)sender;
+            LabelTekst.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString(knop.Content.ToString());
+        }
+
+
+
+
+
+        private void boldcheckbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ButtonBold.IsChecked = boldcheckbox.IsChecked;
+        }
+
+        private void boldcheckbox_Checked(object sender, RoutedEventArgs e)
+        {
+            ButtonBold.IsChecked = boldcheckbox.IsChecked;
+        }
+
+        private void italiccheckbox_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonItalic.IsChecked = italiccheckbox.IsChecked;
         }
     }
 }

@@ -14,6 +14,20 @@
             <TextBlock Margin="10">Font vergroten en verkleinen</TextBlock>
             <RepeatButton Margin="10" Name="increasefont" Click="increasefont_Click" Delay="1000">+</RepeatButton>
             <RepeatButton Margin="10" Name="decreasefont" Click="decreasefont_Click" Delay="1000">-</RepeatButton>
+
+        </StackPanel>
+        <Label Margin="0 30 0 10" >Tekstkleur</Label>
+
+        <StackPanel Orientation="Vertical">
+            <RadioButton Margin="5 0" Content="Blue" GroupName="kleur" Checked="Color_Checked"></RadioButton>
+            <RadioButton Margin="5 0" Content="Black" GroupName="kleur" Checked="Color_Checked"></RadioButton>
+            <RadioButton Margin="5 0" Content="Red" GroupName="kleur" Checked="Color_Checked"></RadioButton>
+            <RadioButton Margin="5 0" Content="Yellow" GroupName="kleur" Checked="Color_Checked"></RadioButton>
+        </StackPanel>
+        <Label Height="30">checkbox</Label>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox Name="boldcheckbox" Checked="boldcheckbox_Checked" Unchecked="boldcheckbox_Unchecked">Bold</CheckBox>
+            <CheckBox Name="italiccheckbox" Click="italiccheckbox_Click">Italic</CheckBox>
         </StackPanel>
 
     </StackPanel>
