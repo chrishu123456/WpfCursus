@@ -9,7 +9,12 @@
     <StackPanel>
         <Label BorderBrush="Black" BorderThickness="2" Name="LabelTekst" Height="50">Dit is de tekstblok die we gaan manipuleren</Label>
         <StackPanel Orientation="Horizontal">
-            <ToggleButton Margin="10" Name="ButtonBold" Checked="ButtonBold_Checked" Unchecked="ButtonBold_Unchecked">Bold</ToggleButton>
+            <ToggleButton Margin="10" Name="ButtonBold" Checked="ButtonBold_Checked" Unchecked="ButtonBold_Unchecked" >
+                <StackPanel>
+                    <Image Source="bold.png"></Image>
+                    <Label>Bold</Label>
+                </StackPanel>
+            </ToggleButton>
             <ToggleButton Margin="10" Name="ButtonItalic" Click="ButtonItalic_Click">Italic</ToggleButton>
             <TextBlock Margin="10">Font vergroten en verkleinen</TextBlock>
             <RepeatButton Margin="10" Name="increasefont" Click="increasefont_Click" Delay="1000">+</RepeatButton>
@@ -27,7 +32,7 @@
         <Label Height="30">checkbox</Label>
         <StackPanel Orientation="Horizontal">
             <CheckBox Name="boldcheckbox" Checked="boldcheckbox_Checked" Unchecked="boldcheckbox_Unchecked">Bold</CheckBox>
-            <CheckBox Name="italiccheckbox" Click="italiccheckbox_Click">Italic</CheckBox>
+            <CheckBox Name="italiccheckbox" Click="ButtonItalic_Click">Italic</CheckBox>
         </StackPanel>
 
     </StackPanel>

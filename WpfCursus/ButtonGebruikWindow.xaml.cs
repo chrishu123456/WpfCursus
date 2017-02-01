@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Controls.Primitives;
 
 namespace WpfCursus
 {
@@ -39,15 +40,39 @@ namespace WpfCursus
 
         private void ButtonItalic_Click(object sender, RoutedEventArgs e)
         {
-            if (ButtonItalic.IsChecked == true)
+           
+
+           ToggleButton knop = (ToggleButton)sender;
+
+           // if (knop.IsChecked == null)
+            // {
+              //  LabelTekst.FontStyle = FontStyles.Italic;
+           // }
+          //  if (knop.IsChecked == false)
+          //  { LabelTekst.FontStyle = FontStyles.Italic;
+          //  }
+            
+             if (knop.IsChecked == true)
             {
-                LabelTekst.FontStyle = FontStyles.Italic;
-                italiccheckbox.IsChecked = ButtonItalic.IsChecked;
+               LabelTekst.FontStyle = FontStyles.Italic;
             }
-            else
-            { LabelTekst.FontStyle = FontStyles.Normal;
-                italiccheckbox.IsChecked = ButtonItalic.IsChecked; 
+             else if (knop.IsChecked == false)
+            {
+                LabelTekst.FontStyle = FontStyles.Normal;
             }
+            ButtonItalic.IsChecked = knop.IsChecked;
+            italiccheckbox.IsChecked = knop.IsChecked;
+
+            // Console.WriteLine(sender.ToString());
+            // if (ButtonItalic.IsChecked == true)
+            // {
+            //    LabelTekst.FontStyle = FontStyles.Italic;
+            //    italiccheckbox.IsChecked = ButtonItalic.IsChecked;
+            // }
+            // else
+            // { LabelTekst.FontStyle = FontStyles.Normal;
+            //    italiccheckbox.IsChecked = ButtonItalic.IsChecked; 
+            //}
                 
 
         }
